@@ -7,11 +7,11 @@ export default class InlineStyleCommand {
 
   static enableInlineCss(editor, sender, opts = {}) {
     sender.get('context').enable = true;
-    editor.getConfig().enalbeInlineCss = true;
+    editor.getConfig().enableInlineCss = true;
   }
 
   static disableInlineCss(editor, sender, opts = {}) {
     sender.get('context').enable = false;
-    editor.getConfig().enalbeInlineCss = false;
+    editor.getConfig().enableInlineCss = false;
   }
 }
