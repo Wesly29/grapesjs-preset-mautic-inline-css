@@ -6,7 +6,7 @@
 This preset configures GrapesJS to be used as a Mautic Builder with some unique features and blocks.
 
 ### Plugin to add GrapesJS features
- 
+
 - Add function to edit source code
 - Extend the original image and add a confirm dialog before removing it
 - Option to hide/show Layers Manager
@@ -35,14 +35,14 @@ This preset configures GrapesJS to be used as a Mautic Builder with some unique 
 
 ## Summary
 
-* Plugin name: `grapesjs-preset-mautic`
+* Plugin name: `grapesjs-preset-mautic-inline-csss`
 
 
 
 ## Download
 
 * GIT
-  * `git clone https://github.com/mautic/grapesjs-preset-mautic.git`
+  * `git clone https://github.com/Wesly29/grapesjs-preset-mautic-inline-css.git`
 
 
 
@@ -95,8 +95,8 @@ const editor = grapesjs.init({
 Clone the repository
 
 ```sh
-$ git clone https://github.com/mautic/grapesjs-preset-mautic.git
-$ cd grapesjs-preset-mautic
+$ git clone https://github.com/Wesly29/grapesjs-preset-mautic-inline-css.git
+$ cd grapesjs-preset-mautic-inline-css
 ```
 
 Install dependencies
@@ -119,7 +119,7 @@ $ npm run build
 
 ### Dependencies
 
-Html needs to be `beautified` for the click tracking to work. Therefore, we can not use the built in command: `mjml-get-code` but we have to use `mjml2html` directly. 
+Html needs to be `beautified` for the click tracking to work. Therefore, we can not use the built in command: `mjml-get-code` but we have to use `mjml2html` directly.
 
 > `beautify` option is deprecated in mjml-core and only available in mjml cli.
 https://github.com/mautic/mautic/issues/10331
@@ -137,7 +137,7 @@ this.logger.error('Some info for debugging');
 ```
 
 ### Changing the log level
-During development the log level can be set to debug in `index.js` 
+During development the log level can be set to debug in `index.js`
 
 ```js
   const config = {

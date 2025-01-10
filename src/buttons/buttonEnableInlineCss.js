@@ -28,7 +28,7 @@ export default class ButtonEnableInlineCss {
 
   addCommand() {
     this.editor.Commands.add(EnableInlineCssCommand.name, {
-      run: EnableInlineCssCommand.launchCodeEditorModal
+      run: EnableInlineCssCommand.enableInlineCss,
     });
   }
 }
