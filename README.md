@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This preset configures GrapesJS to be used as a Mautic Builder with some unique features and blocks.
+This preset configures GrapesJS to be used as a Mautic Builder with some unique features and blocks. This plugin is forked from [adiux/grapesjs-preset-mautic](https://github.com/adiux/grapesjs-preset-mautic) and added feature to enable/disable inline css. The default option is inline css is enabled.
 
 ### Plugin to add GrapesJS features
 
