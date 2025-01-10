@@ -17,6 +17,7 @@ export default class ButtonEnableInlineCss {
     this.editor.Panels.addButton('options', [
       {
         id: 'enable-inline-css',
+        active: true,
         className: 'fa fa-css3',
         attributes: {
           title: Mautic.translate('grapesjsbuilder.enableInlineCss'),
