@@ -1,6 +1,7 @@
 import ButtonClose from './buttons/buttonClose';
 import ButtonApply from './buttons/buttonApply';
 import ButtonPreview from './buttons/buttonPreview';
+import ButtonEnableInlineCss from './buttons/buttonEnableInlineCss';
 
 export default (editor, opts = {}) => {
   const { $ } = editor;
@@ -85,6 +86,13 @@ export default (editor, opts = {}) => {
   if (toggleImages !== null) {
     pm.removeButton('options', 'gjs-toggle-images');
   }
+
+  //Add enable inline css button
+  const btnEnableInlineCss = new ButtonEnableInlineCss(editor);
+  btnEnableInlineCss.addCommand();
+  btnEnableInlineCss.addButton();
+
+
   // add editor preview button
   const btnPreview = new ButtonPreview(editor);
   btnPreview.addCommand();
