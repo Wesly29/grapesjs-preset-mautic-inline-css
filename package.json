@@ -1,11 +1,11 @@
 {
-  "name": "grapesjs-preset-mautic",
+  "name": "grapesjs-preset-mautic-inline-css",
   "version": "1.0.4",
   "description": "Grapesjs Preset Mautic maintained by aivie.ch",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adiux/grapesjs-preset-mautic.git"
+    "url": "https://github.com/Wesly29/grapesjs-preset-mautic-inline-css.git"
   },
   "scripts": {
     "start": "grapesjs-cli serve",
