@@ -14,22 +14,24 @@ export default class ButtonEnableInlineCss {
   }
 
   addButton() {
-    this.editor.Panels.addButton('options', [
-      {
-        id: 'enable-inline-css',
-        active: true,
-        className: 'fa fa-css3',
-        attributes: {
-          title: Mautic.translate('grapesjsbuilder.enableInlineCss'),
-        },
-        command: EnableInlineCssCommand.name,
+    this.editor.Panels.addButton('options', [{
+      id: 'enable-inline-css',
+      active: true,
+      className: 'fa fa-css3',
+      attributes: {
+        title: "Enable inline CSS"
       },
-    ]);
+      context: {
+        enable: true
+      },
+      command: EnableInlineCssCommand.name
+    }]);
   }
 
   addCommand() {
     this.editor.Commands.add(EnableInlineCssCommand.name, {
       run: EnableInlineCssCommand.enableInlineCss,
+      stop: EnableInlineCssCommand.disableInlineCss
     });
   }
 }

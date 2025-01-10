@@ -5,8 +5,13 @@ export default class InlineStyleCommand {
    */
   static name = 'preset-mautic:enable-inline-css';
 
-  static enableInlineCss(sender, opts) {
-    console.log('Enable inline css');
-    console.log(sender, opts);
+  static enableInlineCss(editor, sender, opts = {}) {
+    sender.get('context').enable = true;
+    editor.getConfig().enalbeInlineCss = true;
+  }
+
+  static disableInlineCss(editor, sender, opts = {}) {
+    sender.get('context').enable = false;
+    editor.getConfig().enalbeInlineCss = false;
   }
 }

@@ -1,4 +1,5 @@
 import Logger from './logger';
+import juice from 'juice';
 
 export default class ContentService {
   static modeEmailHtml = 'email-html';
@@ -49,9 +50,19 @@ export default class ContentService {
      */
     Mautic.sanitizeHtmlBeforeSave(mQuery(originalContent));
 
-    const htmlCombined = `${doctype}<html>${editor.getHtml()}<style>${editor.getCss({
-      avoidProtected: true,
-    })}</style></html>`;
+    const inlineCssEnabled = editor.getConfig().enableInlineCss;
+
+    let html = '';
+
+    if(inlineCssEnabled) {
+      const tmpl = editor.getHtml() + `<style>${editor.getCss()}</style>`;
+      html = juice(tmpl);
+    }else{
+      html = `${editor.getHtml()}<style>${editor.getCss({ avoidProtected: true, })}</style>`;
+    }
+
+    const htmlCombined = `${doctype}<html>${html}</html>`;
+   
 
     // get a DocumentHTML from the string
     const htmlDocument = parser.parseFromString(htmlCombined, 'text/html');
